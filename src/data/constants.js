@@ -10,7 +10,7 @@ export const Bio = {
     "I'm dedicated to excelling as a Front-end Developer and UI/UX Designer. My commitment to improving my skills and passion for design motivates me to pursue professional growth. Focused on innovation, I aim to enhance user experiences and engagement. My goal is to create impactful solutions in Front-end Development and UI/UX Design.",
   github: "https://github.com/RavinduChamodWickramage",
   resume:
-    "https://drive.google.com/file/d/1NDxS9v1NYkIbyOTKy65acw7efcRI-jNL/view?usp=drive_link",
+    "https://drive.google.com/file/d/1gi_0QXdcf6R5zvX5hAynIorpSpiTNV35/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/ravindu-chamod-wickramage/",
   insta: "https://www.instagram.com/official_mr_wicky/",
   facebook: "https://www.facebook.com/ravindu.chamod.wickramage",
