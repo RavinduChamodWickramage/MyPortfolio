@@ -10,7 +10,7 @@ export const Bio = {
     "I'm dedicated to excelling as a Front-end Developer and UI/UX Designer. My commitment to improving my skills and passion for design motivates me to pursue professional growth. Focused on innovation, I aim to enhance user experiences and engagement. My goal is to create impactful solutions in Front-end Development and UI/UX Design.",
   github: "https://github.com/RavinduChamodWickramage",
   resume:
-    "https://drive.google.com/file/d/1D01D2ZtnzBe__lIpHaBOPwuehMG8xIi1/view?usp=sharing",
+    "https://drive.google.com/file/d/1NDxS9v1NYkIbyOTKy65acw7efcRI-jNL/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/ravindu-chamod-wickramage/",
   insta: "https://www.instagram.com/official_mr_wicky/",
   facebook: "https://www.facebook.com/ravindu.chamod.wickramage",
@@ -230,8 +230,8 @@ export const projects = [
       "Express Js",
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Trackify",
-    webapp: "https://trackify.duckdns.org",
+    github: "https://github.com/RavinduChamodWickramage/MyPortfolio",
+    webapp: "https://ravinduwickramageportfolio.web.app/",
   },
   {
     id: 1,
@@ -248,15 +248,33 @@ export const projects = [
       "PHP",
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Trackify",
-    webapp: "https://trackify.duckdns.org",
+    github: "https://github.com/RavinduChamodWickramage/ERecipeBook",
+    webapp: "",
+  },
+  {
+    id: 2,
+    title: "Foodie-Restaurant-Landing-Page",
+    date: "December 2023",
+    description:
+      "Foodie: A React.js-based food delivery website showcasing seamless restaurant exploration, menu browsing, ordering, and delivery tracking. Its responsive design and intuitive UX offer a glimpse into dynamic online food platforms.",
+    image:
+      "https://i.ytimg.com/vi/iAKFCr_t3pk/maxresdefault.jpg",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React js",
+    ],
+    category: "web app",
+    github: "https://github.com/RavinduChamodWickramage/Foodie-Restaurant-Landing-Page",
+    webapp: "",
   },
 ];
 
 /*export const TimeLineData = [
-  { year: 2017, text: "Started my journey" },
-  { year: 2018, text: "Worked as a freelance developer" },
-  { year: 2019, text: "Founded JavaScript Mastery" },
-  { year: 2020, text: "Shared my projects with the world" },
-  { year: 2021, text: "Started my own platform" },
+  { year: 2023, text: "Started my journey" },
+  { year: 2023, text: "Worked as a freelance developer" },
+  { year: 2023, text: "Founded JavaScript Mastery" },
+  { year: 2023, text: "Shared my projects with the world" },
+  { year: 2023, text: "Started my own platform" },
 ];*/
