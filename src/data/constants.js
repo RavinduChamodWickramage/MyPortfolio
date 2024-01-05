@@ -270,11 +270,3 @@ export const projects = [
     webapp: "",
   },
 ];
-
-/*export const TimeLineData = [
-  { year: 2023, text: "Started my journey" },
-  { year: 2023, text: "Worked as a freelance developer" },
-  { year: 2023, text: "Founded JavaScript Mastery" },
-  { year: 2023, text: "Shared my projects with the world" },
-  { year: 2023, text: "Started my own platform" },
-];*/
