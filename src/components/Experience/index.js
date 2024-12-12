@@ -8,7 +8,7 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import ExperienceCard from '../Cards/ExperienceCard';
-import { experiences } from '../../data/constants';
+import { extraCurriculars } from "../../data/constants";
 
 const Container = styled.div`
     display: flex;
@@ -76,31 +76,32 @@ const TimelineSection = styled.div`
 
 const index = () => {
     return (
-        <Container id="experience">
-            <Wrapper>
-                <Title>EXTRA-CURRICULARS</Title>
-                <Desc>
-                    My extra curriculars working on different clubs and projects.
-                </Desc>
-                <TimelineSection>
-                    <Timeline>
-                        {experiences.map((experience,index) => (
-                            <TimelineItem>
-                                <TimelineSeparator>
-                                    <TimelineDot variant="outlined" color="secondary" />
-                                    {index !== experiences.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
-                                </TimelineSeparator>
-                                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                                    <ExperienceCard experience={experience}/>
-                                </TimelineContent>
-                            </TimelineItem>
-                        ))}
-                    </Timeline>
-
-                </TimelineSection>
-            </Wrapper>
-        </Container>
-    )
+      <Container id="experience">
+        <Wrapper>
+          <Title>EXTRA-CURRICULARS</Title>
+          <Desc>
+            My extra curriculars working on different clubs and projects.
+          </Desc>
+          <TimelineSection>
+            <Timeline>
+              {extraCurriculars.map((experience, index) => (
+                <TimelineItem>
+                  <TimelineSeparator>
+                    <TimelineDot variant="outlined" color="secondary" />
+                    {index !== extraCurriculars.length - 1 && (
+                      <TimelineConnector style={{ background: "#854CE6" }} />
+                    )}
+                  </TimelineSeparator>
+                  <TimelineContent sx={{ py: "12px", px: 2 }}>
+                    <ExperienceCard experience={experience} />
+                  </TimelineContent>
+                </TimelineItem>
+              ))}
+            </Timeline>
+          </TimelineSection>
+        </Wrapper>
+      </Container>
+    );
 }
 
 export default index

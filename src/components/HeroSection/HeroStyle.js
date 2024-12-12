@@ -130,7 +130,7 @@ export const Title = styled.div`
 
 export const TextLoop = styled.div`
   font-weight: 600;
-  font-size: 32px;
+  font-size: 24px;
   display: flex;
   gap: 12px;
   color: ${({ theme }) => theme.text_primary};
@@ -200,4 +200,23 @@ export const ResumeButton = styled.a`
         font-size: 18px;
     } 
 
+`;
+
+export const SocialLinks = styled.div`
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  @media (max-width: 960px) {
+    justify-content: center;
+  }
+
+  a {
+    font-size: 24px;
+    color: ${({ theme }) => theme.primary};
+    transition: all 0.3s ease;
+    &:hover {
+      color: ${({ theme }) => theme.text_primary};
+      transform: scale(1.1);
+    }
+  }
 `;
