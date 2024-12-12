@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "ravinduwickramageportfolio"
-  }
+    "default": "ravinduwickramageportfolio",
+    "prod": "ravinduwickramageportfolio"
+  },
+  "targets": {},
+  "etags": {}
 }
