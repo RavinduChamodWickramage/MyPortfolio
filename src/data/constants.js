@@ -2,7 +2,7 @@ export const Bio = {
   name: "Ravindu Chamod Wickramage",
   roles: [
     "a Software Engineer Enthusiast",
-    "am seeking a Traineeship/ Internship",
+    "seeking a Traineeship/ Internship",
   ],
   description:
     "Passionate Software Developer dedicated to creating impactful solutions and enhancing user experiences. Committed to innovation and continuous skill growth in software engineering. Seeking aninternship to contribute to meaningful projects and expand my expertise.",
