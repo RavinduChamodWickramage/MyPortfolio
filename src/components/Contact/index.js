@@ -1,7 +1,14 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import emailjs from "@emailjs/browser";
-import { Snackbar } from "@mui/material";
+import {
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaInstagram,
+} from "react-icons/fa";
 
 const Container = styled.div`
   display: flex;
@@ -53,7 +60,7 @@ const Desc = styled.div`
   }
 `;
 
-const ContactForm = styled.form`
+const ContactInfo = styled.div`
   width: 95%;
   max-width: 600px;
   display: flex;
@@ -66,93 +73,28 @@ const ContactForm = styled.form`
   gap: 12px;
 `;
 
-const ContactTitle = styled.div`
-  font-size: 22px;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
-`;
-
-const ContactInput = styled.input`
-  flex: 1;
-  background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary};
-  outline: none;
+const ContactItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 18px;
   color: ${({ theme }) => theme.text_primary};
-  border-radius: 12px;
-  padding: 12px 16px;
-  &:focus {
-    border: 1px solid ${({ theme }) => theme.primary};
-  }
 `;
 
-const ContactInputMessage = styled.textarea`
-  flex: 1;
-  background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary};
-  outline: none;
-  font-size: 18px;
+const ContactIcon = styled.div`
+  color: ${({ theme }) => theme.primary};
+  font-size: 24px;
+`;
+
+const ContactLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
-  border-radius: 12px;
-  padding: 12px 16px;
-  &:focus {
-    border: 1px solid ${({ theme }) => theme.primary};
-  }
-`;
-
-const ContactButton = styled.button`
-  width: 100%;
   text-decoration: none;
-  text-align: center;
-  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  padding: 13px 16px;
-  margin-top: 2px;
-  border-radius: 12px;
-  border: none;
-  color: ${({ theme }) => theme.text_primary};
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
   &:hover {
-    transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow: 20px 20px 60px #1f2634, filter: brightness(1);
+    text-decoration: underline;
   }
 `;
 
 const Contact = () => {
-  const [open, setOpen] = useState(false);
-  const formRef = useRef();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData(formRef.current);
-    const emailData = {
-      from_email: formData.get("from_email"),
-      from_name: formData.get("from_name"),
-      subject: formData.get("subject"),
-      message: formData.get("message"),
-    };
-
-    emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        formRef.current,
-        "YOUR_USER_ID"
-      )
-      .then(
-        (result) => {
-          setOpen(true);
-          formRef.current.reset();
-        },
-        (error) => {
-          console.error("Email sending failed:", error);
-        }
-      );
-  };
-
   return (
     <Container>
       <Wrapper id="contact">
@@ -160,21 +102,76 @@ const Contact = () => {
         <Desc>
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
-        <ContactForm ref={formRef} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀 ( ravinduchamod1@gmail.com )</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit">Send</ContactButton>
-        </ContactForm>
-        <Snackbar
-          open={open}
-          autoHideDuration={6000}
-          onClose={() => setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
-        />
+        <ContactInfo>
+          <ContactItem>
+            <ContactIcon>
+              <FaEnvelope />
+            </ContactIcon>
+            <ContactLink href="mailto:ravinduchamod1@gmail.com">
+              ravinduchamod1@gmail.com
+            </ContactLink>
+          </ContactItem>
+          <ContactItem>
+            <ContactIcon>
+              <FaPhone />
+            </ContactIcon>
+            <ContactLink href="tel:+94714811327">+94 71 481 1327</ContactLink>
+          </ContactItem>
+          <ContactItem>
+            <ContactIcon>
+              <FaMapMarkerAlt />
+            </ContactIcon>
+            <span>432/7/B, Watarawuma Rd, Naduna, Ganemulla, Sri Lanka</span>
+          </ContactItem>
+          <ContactItem>
+            <ContactIcon>
+              <FaGithub />
+            </ContactIcon>
+            <ContactLink
+              href="https://github.com/RavinduChamodWickramage"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github.com/RavinduChamodWickramage
+            </ContactLink>
+          </ContactItem>
+          <ContactItem>
+            <ContactIcon>
+              <FaLinkedin />
+            </ContactIcon>
+            <ContactLink
+              href="https://linkedin.com/in/ravindu-chamod-wickramage"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin.com/in/ravindu-chamod-wickramage
+            </ContactLink>
+          </ContactItem>
+          <ContactItem>
+            <ContactIcon>
+              <FaFacebook />
+            </ContactIcon>
+            <ContactLink
+              href="https://facebook.com/ravindu.chamod.wickramage"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              facebook.com/ravindu.chamod.wickramage
+            </ContactLink>
+          </ContactItem>
+          <ContactItem>
+            <ContactIcon>
+              <FaInstagram />
+            </ContactIcon>
+            <ContactLink
+              href="https://instagram.com/official_mr_wicky"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              instagram.com/official_mr_wicky
+            </ContactLink>
+          </ContactItem>
+        </ContactInfo>
       </Wrapper>
     </Container>
   );

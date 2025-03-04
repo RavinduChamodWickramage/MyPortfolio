@@ -8,7 +8,7 @@ export const Bio = {
     "Passionate Software Developer dedicated to creating impactful solutions and enhancing user experiences. Committed to innovation and continuous skill growth in software engineering. Seeking aninternship to contribute to meaningful projects and expand my expertise.",
   github: "https://github.com/RavinduChamodWickramage",
   resume:
-    "https://drive.google.com/file/d/1KL-LOFTEYYJDYKWn5FlvKKmGkBMx5_IL/view?usp=sharing",
+    "https://drive.google.com/file/d/1sks_bF8lBMjlX42SFehIVhX4H7jzgVir/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/ravindu-chamod-wickramage/",
   insta: "https://www.instagram.com/official_mr_wicky/",
   facebook: "https://www.facebook.com/ravindu.chamod.wickramage",

@@ -10,33 +10,36 @@ import {
   ButtonContainer,
   MobileIcon,
   MobileMenu,
-  MobileNavLogo,
   MobileLink,
 } from "./NavbarStyledComponent";
 import { DiCssdeck } from "react-icons/di";
 import { FaBars } from "react-icons/fa";
-import { Bio } from "../../data/constants";
-import { Close, CloseRounded } from "@mui/icons-material";
 import { useTheme } from "styled-components";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const theme = useTheme();
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to="/">
-          <a
-            style={{
-              display: "flex",
-              alignItems: "center",
-              color: "white",
-              marginBottom: "20;",
-              cursor: "pointer",
-            }}
-          >
-            <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
-          </a>
+        <NavLogo
+          onClick={scrollToTop}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            color: "white",
+            marginBottom: "20;",
+            cursor: "pointer",
+          }}
+        >
+          <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
         </NavLogo>
         <MobileIcon>
           <FaBars
@@ -56,7 +59,6 @@ const Navbar = () => {
           <RegLogButton style={{ margin: "10px" }} href="#contact">
             Contact Me
           </RegLogButton>
-          {/* <RegLogButton style={{ margin: "10px" }}>Register</RegLogButton> */}
         </ButtonContainer>
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
@@ -108,11 +110,10 @@ const Navbar = () => {
                 color: "white",
                 width: "max-content",
               }}
-               href="#contact"
+              href="#contact"
             >
               Contact Me
             </RegLogButton>
-            {/* <RegLogButton style={{margine: '10px', padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}}>Register</RegLogButton> */}
           </MobileMenu>
         )}
       </NavbarContainer>
